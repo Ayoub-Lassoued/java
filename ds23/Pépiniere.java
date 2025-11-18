@@ -34,7 +34,8 @@ class Pépiniere {
     public double totalAbsorptionTotaleCO2() {
         double total = 0;
         for (int i = 0; i < nbPlante; i++) {
-            if (inventaire[i] instanceof Arbre) {
+            if (!(inventaire[i] instanceof Arbre)) {
+            } else {
                 total += ((Arbre) inventaire[i]).absorptionCO2();
             }
 
